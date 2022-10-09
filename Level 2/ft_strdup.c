@@ -1,0 +1,23 @@
+#include <stdlib.h>
+
+char    *ft_strdup(char *src)
+{
+	int i;
+	int len;
+	char *new;
+
+	i = 0;
+	len = 0;
+	while (src[len])
+		len++;
+	new = malloc(sizeof(*new) * (len + 1));
+	if (!new)
+		return (NULL);
+	while (i < len)
+	{
+		new[i] = src[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
+}
