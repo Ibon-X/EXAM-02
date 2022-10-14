@@ -2,26 +2,26 @@
 
 void	epur_str(char *s)
 {
-	int	flg;
+	int flag;
 
-	while (*s == 9 || *s == 32)
+	while (*s == ' ' || *s == '\t')
 		s++;
 	while (*s)
 	{
-		if (*s == 9 || *s == 32)
-			flg = 1;
-		if (!(*s == 9 || *s == 32))
+		if (*s == ' ' || *s == '\t')
+			flag = 1;
+		if (!(*s == ' ' || *s == '\t'))
 		{
-			if (flg)
+			if (flag)
 				write (1, " ", 1);
-			flg = 0;
+			flag = 0;
 			write (1, s, 1);
 		}
 		s++;
 	}
 }
 
-int main(int ac, char **av)
+int 	main(int ac, char **av)
 {
 	if (ac == 2)
 		epur_str(av[1]);

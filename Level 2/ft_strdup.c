@@ -2,22 +2,21 @@
 
 char    *ft_strdup(char *src)
 {
-	int i;
-	int len;
-	char *new;
-
-	i = 0;
+	char	*new;
+	int	len; 
+	
 	len = 0;
 	while (src[len])
 		len++;
 	new = malloc(sizeof(*new) * (len + 1));
 	if (!new)
 		return (NULL);
-	while (i < len)
+	len = 0;
+	while (src[len])
 	{
-		new[i] = src[i];
-		i++;
+		new[len] = src[len];
+		len++;
 	}
-	new[i] = '\0';
+	new[len] = '\0';
 	return (new);
 }
