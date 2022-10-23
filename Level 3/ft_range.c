@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 int	absolute_value(int n)
 {
 	if (n < 0)
