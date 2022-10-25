@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	do_op(char * n1, char c, char *n2)
+void	do_op(char *s1, char c, char *s2)
 {
 	if (c == '+')
-		printf("%i", (atoi(n1) + atoi(n2)));
+		printf("%i", (atoi(s1) + atoi(s2)));
 	else if (c == '-')
-		 printf("%i", (atoi(n1) - atoi(n2)));
+		 printf("%i", (atoi(s1) - atoi(s2)));
 	else if (c == '*')
-		 printf("%i", (atoi(n1) * atoi(n2)));
+		 printf("%i", (atoi(s1) * atoi(s2)));
 	else if (c == '/')
-		 printf("%i", (atoi(n1) / atoi(n2)));
+		 printf("%i", (atoi(s1) / atoi(s2)));
 	else if (c == '%')
-		 printf("%i", (atoi(n1) % atoi(n2)));
+		 printf("%i", (atoi(s1) % atoi(s2)));
 }
 
 int	main(int ac, char **av)
