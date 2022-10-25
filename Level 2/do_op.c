@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int ac, char **av)
+void	do_op(char * n1, char c, char *n2)
+{
+	if (c == '+')
+		printf("%i", (atoi(n1) + atoi(n2)));
+	else if (c == '-')
+		 printf("%i", (atoi(n1) - atoi(n2)));
+	else if (c == '*')
+		 printf("%i", (atoi(n1) * atoi(n2)));
+	else if (c == '/')
+		 printf("%i", (atoi(n1) / atoi(n2)));
+	else if (c == '%')
+		 printf("%i", (atoi(n1) % atoi(n2)));
+}
+
+int	main(int ac, char **av)
 {
 	if (ac == 4)
-	{
-		if (av[2][0] == '+')
-			printf("%d", (atoi(av[1]) + atoi(av[3])));
-		else if (av[2][0] == '-')
-			printf("%d", (atoi(av[1]) - atoi(av[3])));
-		else if (av[2][0] == '*')
-			printf("%d", (atoi(av[1]) * atoi(av[3])));
-		else if (av[2][0] == '/')
-			printf("%d", (atoi(av[1]) / atoi(av[3])));
-		else if (av[2][0] == '%')
-			printf("%d", (atoi(av[1]) % atoi(av[3])));
-	}
-	printf("\n");
+		do_op(av[1], av[2][0], av[3]);
+	printf ("\n");
 	return (0);
 }
