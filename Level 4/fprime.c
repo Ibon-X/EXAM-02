@@ -3,25 +3,25 @@
 
 void	ft_fprime(int n)
 {
-	int div;
+	int i;
 
-	div = 2;
+	i = 2;
 	if (n == 1)
 		printf("1");
 	if (n <= 1)
 		return ;
-	while (div <= n)
+	while (i <= n)
 	{
-		if (n % div == 0)
+		if (n % i == 0)
 		{
-			printf("%d", div);
-			if (n == div)
+			printf("%d", i);
+			if (n == i)
 				return ;
 			printf("*");
-			n /= div;
-			div = 1;
+			n /= i;
+			i = 1;
 		}
-		div++;
+		i++;
 	}
 }
 
